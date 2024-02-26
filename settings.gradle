@@ -14,4 +14,11 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Android playground"
+rootProject.buildFileName = "playground.gradle"
+
 include ':app'
+
+
+rootProject.children.each {
+    it.buildFileName = it.name + ".gradle"
+}
